@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Roadmap</title>
+  <style>
+    /* Global Reset & Base Fonts */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #ffffff;
+      color: #33475b;
+      padding: 16px;
+    }
+
+    /* Grid Layout */
+    .hs-roadmap-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .hs-roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .hs-roadmap-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 576px) {
+      .hs-roadmap-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Column Styles */
+    .hs-roadmap-column {
+      background-color: #f5f8fa;
+      border-radius: 8px;
+      padding: 16px;
+      border: 1px solid #cbd6e2;
+    }
+    .hs-roadmap-column-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #cbd6e2;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hs-roadmap-count {
+      background: #cbd6e2;
+      color: #33475b;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+
+    /* Card Styles */
+    .hs-roadmap-card {
+      background: #ffffff;
+      border: 1px solid #eaf0f6;
+      border-radius: 6px;
+      padding: 14px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+    .hs-roadmap-card:last-child {
+      margin-bottom: 0;
+    }
+    .hs-roadmap-card h4 {
+      margin: 8px 0 6px 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2d3e50;
+    }
+    .hs-roadmap-card p {
+      margin: 0;
+      font-size: 0.825rem;
+      color: #516f90;
+      line-height: 1.4;
+    }
+
+    /* Tag / Label Badges */
+    .hs-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .hs-tag-feature { background-color: #e5f5f8; color: #00a38d; }
+    .hs-tag-ux { background-color: #fef3e6; color: #d97706; }
+    .hs-tag-integration { background-color: #f0ecf9; color: #6a78d1; }
+    .hs-tag-infra { background-color: #eaf0f6; color: #516f90; }
+    .hs-tag-security { background-color: #fdeded; color: #f2545b; }
+  </style>
+</head>
+<body>
+
+  <div class="hs-roadmap-container">
+    <div class="hs-roadmap-grid">
+
+      <!-- COLUMN 1 -->
+      <div class="hs-roadmap-column">
+        <div class="hs-roadmap-column-title">
+          <span>Q1 2026</span>
+          <span class="hs-roadmap-count">6</span>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-feature">Feature</span>
+          <h4>SSO Authentication</h4>
+          <p>Enable SAML 2.0 and Google Workspace single sign-on support.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-ux">UX</span>
+          <h4>Dark Mode Toggle</h4>
+          <p>Introduce full native dark mode theme across the dashboard.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-integration">Integration</span>
+          <h4>Zapier V2 App</h4>
+          <p>Update triggers and webhooks for real-time task sync.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-infra">Infrastructure</span>
+          <h4>Database Migration</h4>
+          <p>Upgrade primary cluster to improve query load times by 40%.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-feature">Feature</span>
+          <h4>Export to CSV/PDF</h4>
+          <p>Allow users to export custom reporting tables directly.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-security">Security</span>
+          <h4>SOC2 Audit Prep</h4>
+          <p>Implement comprehensive audit logging and session limits.</p>
+        </div>
+      </div>
+
+      <!-- COLUMN 2 -->
+      <div class="hs-roadmap-column">
+        <div class="hs-roadmap-column-title">
+          <span>Q2 2026</span>
+          <span class="hs-roadmap-count">6</span>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-feature">Feature</span>
+          <h4>Custom Dashboards</h4>
+          <p>Drag-and-drop analytics widgets for personalized views.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-integration">Integration</span>
+          <h4>HubSpot Native Sync</h4>
+          <p>Two-way contact and pipeline sync built directly into settings.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-ux">UX</span>
+          <h4>Mobile Navigation</h4>
+          <p>Redesign navigation drawer for smoother touch responsiveness.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-feature">Feature</span>
+          <h4>Automated Alerts</h4>
+          <p>Custom email/Slack triggers for key account activity.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-infra">Infrastructure</span>
+          <h4>CDN Cache Layer</h4>
+          <p>Optimize static asset delivery globally via Cloudflare.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-ux">UX</span>
+          <h4>Onboarding Flow</h4>
+          <p>Interactive product tour for newly invited workspace users.</p>
+        </div>
+      </div>
+
+      <!-- COLUMN 3 -->
+      <div class="hs-roadmap-column">
+        <div class="hs-roadmap-column-title">
+          <span>Q3 2026</span>
+          <span class="hs-roadmap-count">6</span>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-feature">Feature</span>
+          <h4>AI Assistant Beta</h4>
+          <p>Generative text summaries for user reporting and analytics.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-security">Security</span>
+          <h4>Role-Based Access</h4>
+          <p>Granular permissions for team leads, editors, and guests.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-integration">Integration</span>
+          <h4>Salesforce App</h4>
+          <p>Publish verified app on the Salesforce AppExchange.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-feature">Feature</span>
+          <h4>Bulk Editing Tools</h4>
+          <p>Select multiple records to update statuses or tags at once.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-infra">Infrastructure</span>
+          <h4>API v3 GraphQL</h4>
+          <p>Expose GraphQL endpoints for enterprise customer queries.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-ux">UX</span>
+          <h4>Keyboard Shortcuts</h4>
+          <p>Global power-user hotkeys for navigation and quick actions.</p>
+        </div>
+      </div>
+
+      <!-- COLUMN 4 -->
+      <div class="hs-roadmap-column">
+        <div class="hs-roadmap-column-title">
+          <span>Q4 2026</span>
+          <span class="hs-roadmap-count">6</span>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-feature">Feature</span>
+          <h4>Multi-Currency Support</h4>
+          <p>Dynamic exchange rate calculations for global teams.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-integration">Integration</span>
+          <h4>Microsoft Teams Bot</h4>
+          <p>Receive notifications and approve workflows inside Teams.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-security">Security</span>
+          <h4>HIPAA Compliance</h4>
+          <p>Implement BAA agreements and enhanced encrypted storage.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-ux">UX</span>
+          <h4>Custom Themes</h4>
+          <p>Allow workspace admins to customize brand accent colors.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-feature">Feature</span>
+          <h4>Predictive Forecasting</h4>
+          <p>Machine learning models to project pipeline growth trends.</p>
+        </div>
+        <div class="hs-roadmap-card">
+          <span class="hs-tag hs-tag-infra">Infrastructure</span>
+          <h4>EU Data Residency</h4>
+          <p>Launch dedicated Frankfurt server region for European data.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
