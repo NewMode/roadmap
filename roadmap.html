@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Roadmap</title>
   <style>
-    /* Global Reset & Base Fonts */
+    /* Global Reset & Base Styles */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -15,28 +15,29 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: #ffffff;
       color: #33475b;
-      padding: 16px;
+      padding: 10px;
     }
 
-    /* Grid Layout */
+    /* 3-Column Grid Layout Optimized for 850px Width */
     .hs-roadmap-container {
-      max-width: 1200px;
+      width: 100%;
+      max-width: 830px; /* Snug fit within 850px iframe */
       margin: 0 auto;
     }
     .hs-roadmap-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px; /* Reduced gap to conserve width */
       align-items: start;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 992px) {
+    /* Responsive Adjustments for Smaller Screens */
+    @media (max-width: 768px) {
       .hs-roadmap-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    @media (max-width: 576px) {
+    @media (max-width: 480px) {
       .hs-roadmap-grid {
         grid-template-columns: 1fr;
       }
@@ -45,15 +46,15 @@
     /* Column Styles */
     .hs-roadmap-column {
       background-color: #f5f8fa;
-      border-radius: 8px;
-      padding: 16px;
+      border-radius: 6px;
+      padding: 10px;
       border: 1px solid #cbd6e2;
     }
     .hs-roadmap-column-title {
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       font-weight: 700;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
       border-bottom: 2px solid #cbd6e2;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -64,43 +65,44 @@
     .hs-roadmap-count {
       background: #cbd6e2;
       color: #33475b;
-      font-size: 0.75rem;
-      padding: 2px 8px;
-      border-radius: 12px;
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 10px;
     }
 
-    /* Card Styles */
+    /* Compact Card Styles */
     .hs-roadmap-card {
       background: #ffffff;
       border: 1px solid #eaf0f6;
-      border-radius: 6px;
-      padding: 14px;
-      margin-bottom: 12px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     }
     .hs-roadmap-card:last-child {
       margin-bottom: 0;
     }
     .hs-roadmap-card h4 {
-      margin: 8px 0 6px 0;
-      font-size: 0.95rem;
+      margin: 6px 0 4px 0;
+      font-size: 0.875rem;
       font-weight: 600;
       color: #2d3e50;
+      line-height: 1.25;
     }
     .hs-roadmap-card p {
       margin: 0;
-      font-size: 0.825rem;
+      font-size: 0.775rem;
       color: #516f90;
-      line-height: 1.4;
+      line-height: 1.35;
     }
 
     /* Tag / Label Badges */
     .hs-tag {
       display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 3px 8px;
-      border-radius: 4px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
       text-transform: uppercase;
       letter-spacing: 0.3px;
     }
@@ -116,11 +118,11 @@
   <div class="hs-roadmap-container">
     <div class="hs-roadmap-grid">
 
-      <!-- COLUMN 1 -->
+      <!-- COLUMN 1: NEAR TERM -->
       <div class="hs-roadmap-column">
         <div class="hs-roadmap-column-title">
-          <span>Q1 2026</span>
-          <span class="hs-roadmap-count">6</span>
+          <span>Near Term</span>
+          <span class="hs-roadmap-count">8</span>
         </div>
         <div class="hs-roadmap-card">
           <span class="hs-tag hs-tag-feature">Feature</span>
@@ -152,14 +154,6 @@
           <h4>SOC2 Audit Prep</h4>
           <p>Implement comprehensive audit logging and session limits.</p>
         </div>
-      </div>
-
-      <!-- COLUMN 2 -->
-      <div class="hs-roadmap-column">
-        <div class="hs-roadmap-column-title">
-          <span>Q2 2026</span>
-          <span class="hs-roadmap-count">6</span>
-        </div>
         <div class="hs-roadmap-card">
           <span class="hs-tag hs-tag-feature">Feature</span>
           <h4>Custom Dashboards</h4>
@@ -169,6 +163,14 @@
           <span class="hs-tag hs-tag-integration">Integration</span>
           <h4>HubSpot Native Sync</h4>
           <p>Two-way contact and pipeline sync built directly into settings.</p>
+        </div>
+      </div>
+
+      <!-- COLUMN 2: MID TERM -->
+      <div class="hs-roadmap-column">
+        <div class="hs-roadmap-column-title">
+          <span>Mid Term</span>
+          <span class="hs-roadmap-count">8</span>
         </div>
         <div class="hs-roadmap-card">
           <span class="hs-tag hs-tag-ux">UX</span>
@@ -190,14 +192,6 @@
           <h4>Onboarding Flow</h4>
           <p>Interactive product tour for newly invited workspace users.</p>
         </div>
-      </div>
-
-      <!-- COLUMN 3 -->
-      <div class="hs-roadmap-column">
-        <div class="hs-roadmap-column-title">
-          <span>Q3 2026</span>
-          <span class="hs-roadmap-count">6</span>
-        </div>
         <div class="hs-roadmap-card">
           <span class="hs-tag hs-tag-feature">Feature</span>
           <h4>AI Assistant Beta</h4>
@@ -218,6 +212,14 @@
           <h4>Bulk Editing Tools</h4>
           <p>Select multiple records to update statuses or tags at once.</p>
         </div>
+      </div>
+
+      <!-- COLUMN 3: FUTURE -->
+      <div class="hs-roadmap-column">
+        <div class="hs-roadmap-column-title">
+          <span>Future</span>
+          <span class="hs-roadmap-count">8</span>
+        </div>
         <div class="hs-roadmap-card">
           <span class="hs-tag hs-tag-infra">Infrastructure</span>
           <h4>API v3 GraphQL</h4>
@@ -227,14 +229,6 @@
           <span class="hs-tag hs-tag-ux">UX</span>
           <h4>Keyboard Shortcuts</h4>
           <p>Global power-user hotkeys for navigation and quick actions.</p>
-        </div>
-      </div>
-
-      <!-- COLUMN 4 -->
-      <div class="hs-roadmap-column">
-        <div class="hs-roadmap-column-title">
-          <span>Q4 2026</span>
-          <span class="hs-roadmap-count">6</span>
         </div>
         <div class="hs-roadmap-card">
           <span class="hs-tag hs-tag-feature">Feature</span>
